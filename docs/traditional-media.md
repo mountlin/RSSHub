@@ -21,7 +21,6 @@ pageClass: routes
 支持 [Topic Library](https://abc.net.au/news/topics) 中的所有 Topic，你可以填入其 URL 中 `topic` 后的字段，也可以填入对应的 `documentId`。
 
 如 [Computers and Technology](https://www.abc.net.au/news/topic/computers-and-technology) 的 URL 是 <https://www.abc.net.au/news/topic/computers-and-technology>，其 `topic` 后的字段为 `computers-and-technology`，且该 Topic 的 `documentId` 为 `2302`，所以路由为 [/abc/computers-and-technology](https://rsshub.app/abc/computers-and-technology) 以及 [/abc/2302](https://rsshub.app/abc/2302)。
-
 支持的 Channel 在下表已经全部列出，同上，其他 Channel 请找到对应 Channel 页面的源代码中的 `documentId` 填入。
 
 :::
@@ -632,13 +631,31 @@ Category 列表：
 
 ## 参考消息
 
-### 新闻分类
+### 栏目
 
-<Route author="yuxinliu-alex" example="/cankaoxiaoxi/news/military_news" path="/cankaoxiaoxi/news/:category">
+<Route author="yuxinliu-alex nczitzk" example="/cankaoxiaoxi/column/diyi" path="/cankaoxiaoxi/column/:id?" :paramsDesc="['栏目 id，默认为 diyi，即第一关注']">
 
-| 中国       | 国际       | 军事          | 台海        | 财经         | 科技            | 文化         |
-| ---------- | ---------- | ------------- | ----------- | ------------ | --------------- | ------------ |
-| china_news | world_news | military_news | taiwan_news | finance_news | technology_news | culture_news |
+| 栏目           | id       |
+| -------------- | -------- |
+| 第一关注       | diyi     |
+| 中国           | zhongguo |
+| 国际           | gj       |
+| 观点           | guandian |
+| 锐参考         | ruick    |
+| 体育健康       | tiyujk   |
+| 科技应用       | kejiyy   |
+| 文化旅游       | wenhualy |
+| 参考漫谈       | cankaomt |
+| 研究动态       | yjdt     |
+| 海外智库       | hwzk     |
+| 业界信息・观点 | yjxx     |
+| 海外看中国城市 | hwkzgcs  |
+| 译名趣谈       | ymymqt   |
+| 译名发布       | ymymfb   |
+| 双语汇         | ymsyh    |
+| 参考视频       | video    |
+| 军事           | junshi   |
+| 参考人物       | cankaorw |
 
 </Route>
 
